@@ -1,0 +1,49 @@
+<!--
+ * @Date: 2023-06-05 02:45:12
+ * @LastEditors: xiaoreya@163.com
+ * @LastEditTime: 2023-06-05 03:26:17
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <script src="./MyVue.js"></script> -->
+</head>
+<body>
+  <div id="app"> 
+    <h3>名字是: {{ name }}</h3>
+    <h3>年龄是: {{ age }}</h3>
+    <h3>info.React是: {{ info.React }}</h3>
+    <br />
+    <div>name的值：<input type="text" v-model="name" /></div>
+    <div>age的值：<input type="text" v-model="age" /></div>
+    <div>info.React的值：<input type="text" v-model="info.React" /></div>
+
+  </div>
+
+<script type="module">
+  console.log('App start ...')
+  import MyVue from './MyVue.js';
+
+  const vm = new MyVue({
+    el: '#app',
+    data: {
+      name: 'xiaoreya',
+      age: 18,
+      info: {
+        React: 'I am React!',
+        Vue: 'I am Vue!'
+      }
+    }
+  });
+
+  console.log('myVue: ', vm)
+
+</script>
+  
+</body>
+</html>
